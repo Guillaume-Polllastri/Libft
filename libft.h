@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/26 23:20:49 by gpollast          #+#    #+#             */
-/*   Updated: 2025/04/26 23:33:29 by gpollast         ###   ########.fr       */
+/*   Created: 2025/04/26 23:04:18 by gpollast          #+#    #+#             */
+/*   Updated: 2025/04/26 23:34:32 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#ifndef LIBFT_H
+# define LIBFT_H
 
-void	*ft_memset(void *s, int c, size_t n)
-{
-	char	*ptr;
+#include <stddef.h>
 
-	ptr = (char *) s;
-	while (n > 0)
-	{
-		*ptr = (char) c;
-		ptr++;
-		n--;
-	}
-	return (s);
-}
+void	ft_bzero(void *s, size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
+
+#endif

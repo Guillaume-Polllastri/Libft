@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/26 23:20:49 by gpollast          #+#    #+#             */
-/*   Updated: 2025/04/26 23:33:29 by gpollast         ###   ########.fr       */
+/*   Created: 2025/04/26 23:20:05 by gpollast          #+#    #+#             */
+/*   Updated: 2025/04/26 23:23:05 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*ptr;
+	const	char	*ptr_src;
+	char	*ptr_dest;
+	int	i;
 
-	ptr = (char *) s;
+	ptr_src = (const char *) src;
+	ptr_dest = (char *) dest;
+	i = ptr_dest - ptr_src;
+	if (i < n)
+		n = i;
 	while (n > 0)
 	{
-		*ptr = (char) c;
-		ptr++;
+		*ptr_dest = *ptr_src;
+		*ptr_dest++;
+		*ptr_src++;
 		n--;
 	}
-	return (s);
+	return (dest);
 }

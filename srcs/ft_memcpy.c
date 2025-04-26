@@ -1,11 +1,25 @@
-void	*memcpy(void *dest, const void *src, size_t n)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/26 23:19:40 by gpollast          #+#    #+#             */
+/*   Updated: 2025/04/26 23:36:25 by gpollast         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <libft.h>
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char	*ptr_src;
+	const	char	*ptr_src;
 	char	*ptr_dest;
 
 	ptr_src = (const char *) src;
 	ptr_dest = (char *) dest;
-	while (n < 0)
+	while (n > 0)
 	{
 		*ptr_dest = *ptr_src;
 		ptr_src++;
