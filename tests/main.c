@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 23:14:21 by gpollast          #+#    #+#             */
-/*   Updated: 2025/04/28 14:01:36 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/04/28 14:30:07 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ void test_memset(void)
 
 int	main()
 {
-	printf("%s\n", ft_strchr("total", 'a'));
-	printf("%d\n", ft_isalnum('o'));
+	printf("%s\n", ft_strchr("tatal", 'a'));
+	printf("%s\n", ft_strrchr("tatal", 'a'));
 }
