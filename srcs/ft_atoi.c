@@ -6,13 +6,13 @@
 /*   By: gpollast <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 18:32:16 by gpollast          #+#    #+#             */
-/*   Updated: 2025/04/25 18:52:06 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/04/28 11:57:56 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <libft.h>
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *nptr)
 {
 	int	i;
 	int	res;
@@ -21,30 +21,18 @@ int	ft_atoi(const char *str)
 	i = 0;
 	res = 0;
 	sign = 1;
-	if (str[i] == '-' || str[i] == '+')
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		if (str[i] == '-')
+		if (nptr[i] == '-')
 			sign *= -1;
 		i++;
 	}
-	if (!(str[i] >= '0' && str[i] <= '9'))
+	if (!(nptr[i] >= '0' && nptr[i] <= '9'))
 		return (0);
-	while (str[i])
+	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		res = (res * 10) + (str[i] - '0');
+		res = (res * 10) + (nptr[i] - '0');
 		i++;
 	}
 	return (sign * res);
-}
-
-#include <stdio.h>
-#include <stdlib.h>
-
-int	main(int ac, char **av)
-{
-	if (ac != 2)
-		return (0);
-	printf("%d\n", ft_atoi(av[1]));
-	printf("%d\n", atoi(av[1]));
-	return (0);
 }
