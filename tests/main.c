@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 23:14:21 by gpollast          #+#    #+#             */
-/*   Updated: 2025/04/27 21:35:09 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/04/28 14:01:36 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,10 @@ void test_memset(void)
 		assert(str[i] == 'a');
 		i++;
 	}
-
 }
 
 int	main()
 {
-	test_memset();
-	printf("All tests passed\n");
+	printf("%s\n", ft_strchr("total", 'a'));
+	printf("%d\n", ft_isalnum('o'));
 }

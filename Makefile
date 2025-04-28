@@ -6,7 +6,7 @@
 #    By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/27 20:41:38 by gpollast          #+#    #+#              #
-#    Updated: 2025/04/27 21:12:55 by gpollast         ###   ########.fr        #
+#    Updated: 2025/04/28 14:14:15 by gpollast         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,21 @@ CC = gcc
 AR = ar
 CFLAGS = -Wall -Werror -Wextra -I.
 TARGET = libft.a
-SRCS = 	srcs/ft_memset.c
+SRCS = 	srcs/ft_isaplha.c \
+		srcs/ft_isdigit.c \
+		srcs/ft_isalnum.c \
+		srcs/ft_isprint.c \
+		srcs/ft_strlen.c \
+		srcs/ft_memset.c \
+		srcs/ft_bzero.c \
+		srcs/ft_memcpy.c \
+		srcs/ft_memmove.c \
+		srcs/ft_strlcpy.c \
+		srcs/ft_strlcat.c \
+		srcs/ft_toupper.c \
+		srcs/ft_tolower.c \
+		srcs/ft_strchr.c \
+		srcs/ft_atoi.c
 OBJS = $(SRCS:.c=.o)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
