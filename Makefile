@@ -6,7 +6,7 @@
 #    By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/27 20:41:38 by gpollast          #+#    #+#              #
-#    Updated: 2025/04/28 14:14:15 by gpollast         ###   ########.fr        #
+#    Updated: 2025/04/28 14:28:21 by gpollast         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ SRCS = 	srcs/ft_isaplha.c \
 		srcs/ft_toupper.c \
 		srcs/ft_tolower.c \
 		srcs/ft_strchr.c \
+		srcs/ft_strrchr.c \
 		srcs/ft_atoi.c
 OBJS = $(SRCS:.c=.o)
 %.o: %.c
