@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/26 23:19:40 by gpollast          #+#    #+#             */
-/*   Updated: 2025/04/28 10:48:54 by gpollast         ###   ########.fr       */
+/*   Created: 2025/04/28 10:56:36 by gpollast          #+#    #+#             */
+/*   Updated: 2025/04/28 10:57:00 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
-{
-	const char	*ptr_src;
-	char		*ptr_dest;
+size_t	ft_strlen(char *str);
 
-	ptr_src = (const char *) src;
-	ptr_dest = (char *) dest;
-	while (n > 0)
+size_t	ft_strlcpy(char *dst, const char *src, size_t siz)
+{
+	int	i;
+	int	src_size;
+
+	i = 0;
+	while (src[i] && i < (siz - 1))
 	{
-		*ptr_dest = *ptr_src;
-		ptr_src++;
-		ptr_dest++;
-		n--;
+		dst[i] = src[i];
+		i++;
 	}
-	return (dest);
+	dst[i] = '\0';
+	src_size = ft_strlen(src);
+	return (src_size);
 }
