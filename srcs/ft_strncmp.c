@@ -6,9 +6,11 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 14:42:55 by gpollast          #+#    #+#             */
-/*   Updated: 2025/04/28 14:51:15 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/04/28 19:08:21 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <libft.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
