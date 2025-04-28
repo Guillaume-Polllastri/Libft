@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 23:19:40 by gpollast          #+#    #+#             */
-/*   Updated: 2025/04/26 23:36:25 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/04/28 10:48:54 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	const	char	*ptr_src;
-	char	*ptr_dest;
+	const char	*ptr_src;
+	char		*ptr_dest;
 
 	ptr_src = (const char *) src;
 	ptr_dest = (char *) dest;
