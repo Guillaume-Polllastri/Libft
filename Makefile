@@ -6,7 +6,7 @@
 #    By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/27 20:41:38 by gpollast          #+#    #+#              #
-#    Updated: 2025/04/28 22:17:28 by gpollast         ###   ########.fr        #
+#    Updated: 2025/04/29 12:26:29 by gpollast         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,8 @@ SRCS = 	srcs/ft_isalpha.c \
 	srcs/ft_memchr.c \
 	srcs/ft_memcmp.c \
 	srcs/ft_atoi.c \
-	srcs/ft_calloc.c
+	srcs/ft_calloc.c \
+	srcs/ft_strdup.c
 OBJS = $(SRCS:.c=.o)
 TARGET = $(NAME)
 %.o: %.c
