@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 23:20:05 by gpollast          #+#    #+#             */
-/*   Updated: 2025/04/28 10:49:58 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/04/28 21:48:06 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,15 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	const char	*ptr_src;
 	char		*ptr_dest;
-	int			i;
+	size_t		i;
 
 	ptr_src = (const char *) src;
 	ptr_dest = (char *) dest;
-	i = ptr_dest - ptr_src;
-	if (i < n)
-		n = i;
-	while (n > 0)
+	i = 0;
+	while (i < n)
 	{
-		*ptr_dest = *ptr_src;
-		*ptr_dest++;
-		*ptr_src++;
-		n--;
+		ptr_dest[i] = ptr_src[i];
+		i++;
 	}
 	return (dest);
 }
