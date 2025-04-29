@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 23:04:18 by gpollast          #+#    #+#             */
-/*   Updated: 2025/04/28 22:18:19 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/04/29 14:11:13 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_atoi(const char *nptr);
 void		*ft_calloc(size_t nmemb, size_t size);
 
