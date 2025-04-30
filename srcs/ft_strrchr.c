@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 14:16:49 by gpollast          #+#    #+#             */
-/*   Updated: 2025/04/29 00:09:40 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/04/30 11:20:40 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,11 @@ char	*ft_strrchr(const char *s, int c)
 	i = 0;
 	while (s[i])
 		i++;
-	while (i > 0)
+	while (i >= 0)
 	{
 		if (s[i] == (char) c)
 			return ((char *) s + i);
 		i--;
 	}
-	if (c == '\0')
-		return ((char *) s + i);
 	return (NULL);
 }
