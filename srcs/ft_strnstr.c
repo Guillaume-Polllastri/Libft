@@ -6,43 +6,28 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 15:31:08 by gpollast          #+#    #+#             */
-/*   Updated: 2025/04/29 16:25:08 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/04/30 20:22:30 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-static int	check_word(const char *big, const char c, int index)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	while (big[index])
-	{
-		if (c == big[index])
-			return (index);
-		index++;
-	}
-	return (-1);
-}
+	size_t	i;
+	size_t	j;
 
-char	*ft_strnstr(const char *big, const char *little)
-{
-	int i;
-	int index;
-	
 	i = 0;
-	index = 0;
-	if (!little)
+	if (*little == '\0')
 		return ((char *) big);
-	while (little[i])
+	while (i < len && big[i])
 	{
-		if (check_word(big, little[i], index) == -1)
-		{
-			return (NULL);
-		}
-		else
-		{
-			index = check_word(big, little[i], index + 1);
-			i++;
-		}
+		j = 0;	
+		while (little[j] && big[i + j] == little[j] && (i + j) < len)
+			j++;
+		if (little[j] == '\0')
+			return ((char *) big + i);
+		i++;
 	}
-	return (big + 2);
+	return (NULL);
 }

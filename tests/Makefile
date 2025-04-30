@@ -6,13 +6,13 @@
 #    By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/27 21:14:10 by gpollast          #+#    #+#              #
-#    Updated: 2025/04/27 21:33:24 by gpollast         ###   ########.fr        #
+#    Updated: 2025/04/30 18:28:54 by gpollast         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -I..
-LDFLAGS = -L.. -lft
+LDFLAGS = -L.. -lft -lbsd
 TARGET = a.out
 MAKE = make
 SRCS = main.c
