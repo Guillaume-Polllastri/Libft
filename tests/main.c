@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 23:14:21 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/01 14:52:20 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/01 15:17:18 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,10 @@ void	test_ft_substr(void)
 	printf("%s\n", s);
 }
 
+void	test_ft_strjoin(void)
+{
+	printf("%s\n", ft_strjoin("Salut", " toto"));
+}
 char	*ftoupper(unsigned int i, char *s)
 {
 	if (s[i] >= 'a' && s[i] <= 'z')
@@ -175,6 +179,6 @@ void	test_ft_putnbr_fd(void)
 
 int	main()
 {
-	test_ft_substr();
+	test_ft_strjoin();
 	return (0);
 }
