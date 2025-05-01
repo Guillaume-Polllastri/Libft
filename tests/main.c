@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 23:14:21 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/01 10:30:21 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/01 10:41:37 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,12 +119,21 @@ void	test_ft_putstr_fd(void)
 	printf("%s", "\n");
 }
 
+void	test_ft_putendl_fd(void)
+{
+	char	*s;
+
+	s = "Le test est bon";
+	ft_putendl_fd(s, 0);
+	ft_putendl_fd(s, 1);
+	ft_putendl_fd(s, 2);
+}
 /* ************************************************************************** */
 
 /* ************************************************************************** */
 
 int	main()
 {
-	test_ft_putstr_fd();
+	test_ft_putendl_fd();
 	return (0);
 }
