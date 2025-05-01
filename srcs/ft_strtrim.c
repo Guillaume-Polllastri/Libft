@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 15:18:48 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/01 16:10:48 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/01 16:13:40 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 static int	count_chr_str(char const *set, char c)
 {
 	int	i;
+	int	count;
 
 	i = 0;
+	count = 0;
 	while (set[i])
 	{
 		if (c == set[i])
