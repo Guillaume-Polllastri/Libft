@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 23:14:21 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/01 11:22:58 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/01 14:52:20 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,32 @@ void	test_strnstr(void)
 	printf("ft_strnstr(aaabcabcd, cd, 8)\nExpected : %s\nResult : %s\n\n", strnstr("aaabcabcd", "cd", 8), ft_strnstr("aaabcabcd", "cd", 8));
 }
 
+void	test_ft_substr(void)
+{
+	char const	*s;
+
+	s = "Salut toto";
+
+	s = ft_substr(s, 6, 4);
+	printf("%s\n", s);
+}
+
+char	*ftoupper(unsigned int i, char *s)
+{
+	if (s[i] >= 'a' && s[i] <= 'z')
+		s[i] = s[i] - 'a' + 'A';
+	return (s);
+}
+
+void	test_ft_striteri(void)
+{
+	char	*s;
+
+	s = "toto";
+	ft_striteri(s, (void *) ftoupper(0, s));
+	printf("%s\n", s);
+}
+
 /* ************************************************************************** */
 // ft_putchar_fd
 
@@ -142,12 +168,13 @@ void	test_ft_putnbr_fd(void)
 	ft_putnbr_fd('a', 1);
 	printf("%s", "\n");
 }
+
 /* ************************************************************************** */
 
 /* ************************************************************************** */
 
 int	main()
 {
-	test_ft_putnbr_fd();
+	test_ft_substr();
 	return (0);
 }
