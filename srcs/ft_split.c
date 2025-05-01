@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 16:27:46 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/01 17:03:50 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/01 19:24:48 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char	**ft_split(char const *s, char c)
 			j++;
 			k = 0;
 		}
-		else if
+		else
 		{
 			res[j][k] = s[i];
 			k++;
