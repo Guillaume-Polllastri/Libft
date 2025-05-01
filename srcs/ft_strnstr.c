@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 15:31:08 by gpollast          #+#    #+#             */
-/*   Updated: 2025/04/30 20:22:30 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/01 09:57:09 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		return ((char *) big);
 	while (i < len && big[i])
 	{
-		j = 0;	
+		j = ;
 		while (little[j] && big[i + j] == little[j] && (i + j) < len)
 			j++;
 		if (little[j] == '\0')
