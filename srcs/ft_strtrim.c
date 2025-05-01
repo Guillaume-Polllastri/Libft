@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 15:18:48 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/01 16:13:40 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/01 16:18:57 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	count_chr_str(char const *set, char c)
 			count++;
 		i++;
 	}
-	return (i);
+	return (count);
 }
 
 static int	len_trim(char const *s1, char const *set)
