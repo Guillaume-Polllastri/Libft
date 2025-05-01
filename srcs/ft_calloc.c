@@ -6,12 +6,11 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 22:01:42 by gpollast          #+#    #+#             */
-/*   Updated: 2025/04/29 00:14:25 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/01 14:45:42 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-#include <stdlib.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
