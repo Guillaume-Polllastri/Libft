@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 23:14:21 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/01 15:17:18 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/01 16:23:08 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,12 @@ void	test_ft_strjoin(void)
 {
 	printf("%s\n", ft_strjoin("Salut", " toto"));
 }
+
+void	test_ft_strtrim(void)
+{
+	printf("%s\n", "ft_strtrim(--+S-+al-++ut-- +to-+-+to+-, +-)");
+	printf("%s\n", ft_strtrim("--+S-+al-++ut-- +to-+-+to+-", "+-"));
+}
 char	*ftoupper(unsigned int i, char *s)
 {
 	if (s[i] >= 'a' && s[i] <= 'z')
@@ -179,6 +185,6 @@ void	test_ft_putnbr_fd(void)
 
 int	main()
 {
-	test_ft_strjoin();
+	test_ft_strtrim();
 	return (0);
 }
