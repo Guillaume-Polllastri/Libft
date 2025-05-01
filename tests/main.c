@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 23:14:21 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/01 10:41:37 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/01 11:22:58 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,12 +128,26 @@ void	test_ft_putendl_fd(void)
 	ft_putendl_fd(s, 1);
 	ft_putendl_fd(s, 2);
 }
+
+void	test_ft_putnbr_fd(void)
+{
+	ft_putnbr_fd(2458, 1);
+	printf("%s", "\n");
+	ft_putnbr_fd(2147483647, 1);
+	printf("%s", "\n");
+	ft_putnbr_fd(-2147483648, 1);
+	printf("%s", "\n");
+	ft_putnbr_fd(0, 1);
+	printf("%s", "\n");
+	ft_putnbr_fd('a', 1);
+	printf("%s", "\n");
+}
 /* ************************************************************************** */
 
 /* ************************************************************************** */
 
 int	main()
 {
-	test_ft_putendl_fd();
+	test_ft_putnbr_fd();
 	return (0);
 }
