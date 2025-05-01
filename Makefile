@@ -6,7 +6,7 @@
 #    By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/27 20:41:38 by gpollast          #+#    #+#              #
-#    Updated: 2025/05/01 14:32:34 by gpollast         ###   ########.fr        #
+#    Updated: 2025/05/01 15:10:10 by gpollast         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,7 @@ SRCS = 	srcs/ft_isalpha.c \
 	srcs/ft_calloc.c \
 	srcs/ft_strdup.c \
 	srcs/ft_substr.c \
+	srcs/ft_strjoin.c \
 	srcs/ft_striteri.c \
 	srcs/ft_putchar_fd.c \
 	srcs/ft_putstr_fd.c \

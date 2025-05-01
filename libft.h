@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 23:04:18 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/01 14:33:02 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/01 15:11:07 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int			ft_atoi(const char *nptr);
 void		*ft_calloc(size_t nmemb, size_t size);
 char		*ft_strdup(const char *s);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
+char		*ft_strjoin(char const *s1, char const *s2);
 void		ft_striteri(char *s, void (*f)(unsigned int, char*));
 void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
