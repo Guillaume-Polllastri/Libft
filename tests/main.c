@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 23:14:21 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/02 14:28:31 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/02 19:52:59 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,13 +118,6 @@ void	test_ft_strtrim(void)
 	printf("%s\n", ft_strtrim("--+S-+al-++ut-- +to-+-+to+-", "+-"));
 }
 
-char	*ftest2(unsigned int i, char *s)
-{
-	if (s[i] >= 'a' && s[i] <= 'z')
-		s[i] = s[i] - 'a' + 'A';
-	return (s);
-}
-
 void	test_ft_strmapi(void)
 {
 	char	*s;
@@ -133,13 +126,25 @@ void	test_ft_strmapi(void)
 	printf("%s\n", s);
 }
 
+/* ************************************************************************** */
+
+/* ************************************************************************** */
+
+void	ftest2(unsigned int i, char *s)
+{
+	(void) i;
+	if (*s >= 'a' && *s <= 'z')
+		*s = *s - 'a' + 'A';
+}
+
 void	test_ft_striteri(void)
 {
 	char	*s;
 
-	s = "toto";
-	ft_striteri(s, (void *) ftest2(0, s));
-	printf("%s\n", s);
+	s = ft_strdup("tata");
+	ft_striteri(s, ftest2);
+	printf("%s", s);
+	free(s);
 }
 
 /* ************************************************************************** */
@@ -192,6 +197,8 @@ void	test_ft_putnbr_fd(void)
 	printf("%s", "\n");
 	ft_putnbr_fd('a', 1);
 	printf("%s", "\n");
+	ft_putnbr_fd(-42, 1);
+	printf("%s", "\n");
 }
 
 /* ************************************************************************** */
@@ -200,5 +207,6 @@ void	test_ft_putnbr_fd(void)
 
 int	main()
 {
+	test_ft_striteri();
 	return (0);
 }
