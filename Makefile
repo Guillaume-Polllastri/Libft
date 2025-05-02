@@ -6,7 +6,7 @@
 #    By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/27 20:41:38 by gpollast          #+#    #+#              #
-#    Updated: 2025/05/02 11:28:36 by gpollast         ###   ########.fr        #
+#    Updated: 2025/05/02 19:08:05 by gpollast         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,15 +50,14 @@ SRCS = 	srcs/ft_isalpha.c \
 	srcs/ft_putnbr_fd.c
 
 OBJS = $(SRCS:.c=.o)
-TARGET = $(NAME)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
-all: $(TARGET)
-$(TARGET): $(OBJS)
-	$(AR) -rcs $(TARGET) $(OBJS)
+all: $(NAME)
+$(NAME): $(OBJS)
+	$(AR) -rcs $(NAME) $(OBJS)
 clean:
 	rm -f $(OBJS)
 fclean: clean
-	rm -f $(TARGET)
+	rm -f $(NAME)
 re: fclean all
-.PHONY: all $(TARGET) clean fclean re
+.PHONY: all $(NAME) clean fclean re

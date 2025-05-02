@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 11:25:25 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/01 13:29:21 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/02 19:03:00 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	i = 0;
 	while (s[i])
 	{
-		(*f)(i, s + 1);
+		(*f)(i, &s[i]);
 		i++;
 	}
 }
