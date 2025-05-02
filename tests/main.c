@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 23:14:21 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/01 16:23:08 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/02 09:15:00 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,10 @@ void	test_ft_substr(void)
 
 	s = ft_substr(s, 6, 4);
 	printf("%s\n", s);
+	s = ft_substr(s, 100, 1);
+	printf("%p\n", s);
+	s = ft_substr("tripouille", 1, 1);
+	printf("%s\n", s);
 }
 
 void	test_ft_strjoin(void)
@@ -185,6 +189,6 @@ void	test_ft_putnbr_fd(void)
 
 int	main()
 {
-	test_ft_strtrim();
+	test_ft_substr();
 	return (0);
 }

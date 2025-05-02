@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 14:16:58 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/01 16:27:02 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/02 09:15:50 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,16 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ns;
-	int		i;
 
-	ns = (char *) malloc(sizeof(char) * (len + 1));
+	if (start >= ft_strlen(s))
+		len = 1;
+	else
+		len = MIN(len + 1, ft_strlen(s) - start + 1);
+	ns = (char *) ft_calloc(len, sizeof(char));
 	if (!ns)
 		return (NULL);
-	i = 0;
-	while (s[start])
-	{
-		ns[i] = s[start];
-		i++;
-		start++;
-	}
-	ns[i] = '\0';
+	if (start >= ft_strlen(s))
+		return (ns);
+	ft_strlcpy(ns, s + start, len);
 	return (ns);
 }
