@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 23:04:18 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/02 11:29:37 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/02 14:46:28 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 #include <stddef.h>
 #include <unistd.h>
 #include <stdlib.h>
+
+typedef struct	s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
