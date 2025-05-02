@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 23:14:21 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/02 09:21:55 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/02 14:28:31 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,11 +117,20 @@ void	test_ft_strtrim(void)
 	printf("%s\n", "ft_strtrim(--+S-+al-++ut-- +to-+-+to+-, +-)");
 	printf("%s\n", ft_strtrim("--+S-+al-++ut-- +to-+-+to+-", "+-"));
 }
-char	*ftoupper(unsigned int i, char *s)
+
+char	*ftest2(unsigned int i, char *s)
 {
 	if (s[i] >= 'a' && s[i] <= 'z')
 		s[i] = s[i] - 'a' + 'A';
 	return (s);
+}
+
+void	test_ft_strmapi(void)
+{
+	char	*s;
+
+	s = "toto";
+	printf("%s\n", s);
 }
 
 void	test_ft_striteri(void)
@@ -129,7 +138,7 @@ void	test_ft_striteri(void)
 	char	*s;
 
 	s = "toto";
-	ft_striteri(s, (void *) ftoupper(0, s));
+	ft_striteri(s, (void *) ftest2(0, s));
 	printf("%s\n", s);
 }
 
@@ -191,6 +200,5 @@ void	test_ft_putnbr_fd(void)
 
 int	main()
 {
-	test_ft_substr();
 	return (0);
 }
