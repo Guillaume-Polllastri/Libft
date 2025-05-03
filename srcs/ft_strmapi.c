@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 10:50:13 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/02 19:27:09 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/03 19:53:39 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*res;
 	int	i;
 
-	res = (char *) calloc(ft_strlen(s) + 1, sizeof(char));
+	res = (char *) malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!res)
 		return (NULL);
 	i = 0;
@@ -26,5 +26,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		res[i] = (*f)(i, s[i]);
 		i++;
 	}
+	res[i] = '\0';
 	return (res);
 }
