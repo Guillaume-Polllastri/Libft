@@ -6,65 +6,49 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 15:18:48 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/01 16:18:57 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/03 19:32:16 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-static int	count_chr_str(char const *set, char c)
-{
-	int	i;
-	int	count;
 
-	i = 0;
-	count = 0;
-	while (set[i])
+static unsigned int	find_start(char const *s1, char const *set)
+{
+	unsigned int	start;
+
+	start = 0;
+	while (s1[start])
 	{
-		if (c == set[i])
-			count++;
-		i++;
+		if (ft_strchr(set, s1[start]) == NULL)
+			return(start);
+		start++;
 	}
-	return (count);
+	return (start);
 }
 
-static int	len_trim(char const *s1, char const *set)
+static unsigned int	find_end(char const *s1, char const *set, unsigned int start)
 {
-	int	i;
-	int	len;
+	unsigned int	end;
 
-	len = ft_strlen(s1);
-	i = 0;
-	while (s1[i])
+	end = ft_strlen(s1);
+	while (end > start)
 	{
-		len = len - count_chr_str(set, s1[i]);
-		i++;
+		if (ft_strchr(set, s1[end]) == NULL)
+			return(end);
+		end--;
 	}
-	return (len);
+	return (end);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*res;
-	int		i;
-	int		j;
-	int		len;
+	char			*res;
+	unsigned int		start;
+	unsigned int		end;
 
-	len = len_trim(s1, set);
-	res = (char *) malloc(sizeof(char) * (len + 1));
-	if (!res)
-		return (NULL);
-	i = 0;
-	j = 0;
-	while (s1[i])
-	{
-		if (count_chr_str(set, s1[i]) == 0)
-		{
-			res[j] = s1[i];
-			j++;
-		}
-		i++;
-	}
-	res[j] = '\0';
+	start = find_start(s1, set);
+	end = find_end(s1, set, start);
+	res = ft_substr(s1, start, end - start + 1); 
 	return (res);
 }

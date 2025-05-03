@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 23:14:21 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/02 19:52:59 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/03 19:31:02 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,10 @@ void	test_ft_strtrim(void)
 {
 	printf("%s\n", "ft_strtrim(--+S-+al-++ut-- +to-+-+to+-, +-)");
 	printf("%s\n", ft_strtrim("--+S-+al-++ut-- +to-+-+to+-", "+-"));
+	printf("%s\n", "ft_strtrim(  ,  )");
+	printf("%s\n", ft_strtrim("  ", " "));
+	printf("%s\n", "ft_strtrim(abcdba  , acb)");
+	printf("%s\n", ft_strtrim("abcdba", "acb"));
 }
 
 void	test_ft_strmapi(void)
@@ -207,6 +211,6 @@ void	test_ft_putnbr_fd(void)
 
 int	main()
 {
-	test_ft_striteri();
+	test_ft_strtrim();
 	return (0);
 }
