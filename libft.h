@@ -6,13 +6,12 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 23:04:18 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/04 20:01:29 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/04 20:07:55 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# define MIN(x, y) ((x) < (y) ? (x) : (y))
 
 # include <stddef.h>
 # include <unistd.h>
