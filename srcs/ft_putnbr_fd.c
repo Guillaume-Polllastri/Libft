@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 10:43:21 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/01 11:19:00 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/02 19:14:19 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (n < 0)
 	{
-		ft_putnbr_fd('-', fd);
+		ft_putchar_fd('-', fd);
 		n *= -1;
 	}
 	if (n > 9)
