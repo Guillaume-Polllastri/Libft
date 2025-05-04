@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 23:14:21 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/03 19:31:02 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/04 17:22:47 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,6 +122,20 @@ void	test_ft_strtrim(void)
 	printf("%s\n", ft_strtrim("abcdba", "acb"));
 }
 
+void	test_ft_split(void)
+{
+	char	**res;
+	int	i;
+
+	res = ft_split("         ", ' ');
+	i = 0;
+	while (res[i])
+	{
+		printf("%s\n", res[i]);
+		i++;
+	}
+	free(res);
+}
 void	test_ft_strmapi(void)
 {
 	char	*s;
@@ -211,6 +225,6 @@ void	test_ft_putnbr_fd(void)
 
 int	main()
 {
-	test_ft_strtrim();
+	test_ft_split();
 	return (0);
 }
