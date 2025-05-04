@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 10:50:13 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/03 19:53:39 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/04 18:05:04 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*res;
-	int	i;
+	int		i;
 
 	res = (char *) malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!res)
