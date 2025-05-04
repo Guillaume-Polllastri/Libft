@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 14:16:58 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/02 09:39:07 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/04 20:07:11 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ns;
 
-	len = MIN(len, ft_strlen(s) - start);
+	if (len < (ft_strlen(s) - start))
+		len = len;
+	else
+		len = ft_strlen(s) - start;
 	if (start >= ft_strlen(s))
 		len = 0;
 	ns = (char *) ft_calloc(len + 1, sizeof(char));
