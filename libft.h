@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 23:04:18 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/02 16:54:52 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/04 20:01:29 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 # define LIBFT_H
 # define MIN(x, y) ((x) < (y) ? (x) : (y))
 
-#include <stddef.h>
-#include <unistd.h>
-#include <stdlib.h>
+# include <stddef.h>
+# include <unistd.h>
+# include <stdlib.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
