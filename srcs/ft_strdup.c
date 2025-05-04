@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 14:07:55 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/01 14:45:54 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/04 19:45:29 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strdup(const char *s)
 
 	len = ft_strlen(s);
 	nstr = (char *) malloc(sizeof(char) * (len + 1));
+	if (!nstr)
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{
