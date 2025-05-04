@@ -6,13 +6,13 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 17:14:55 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/04 19:55:04 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/04 19:56:35 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-static char	*itoa_tab(char *res, int n)
+static char	*itoa_tab(char *res, int n, int count)
 {
 	res[count] = '\0';
 	if (n >= 0)
@@ -57,6 +57,6 @@ char	*ft_itoa(int n)
 	res = (char *) malloc(sizeof(char) * (count + 1));
 	if (!res)
 		return (NULL);
-	res = itoa_tab(res, n);
+	res = itoa_tab(res, n, count);
 	return (res);
 }
