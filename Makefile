@@ -6,7 +6,7 @@
 #    By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/27 20:41:38 by gpollast          #+#    #+#              #
-#    Updated: 2025/05/02 19:08:05 by gpollast         ###   ########.fr        #
+#    Updated: 2025/05/04 21:27:09 by gpollast         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,6 +50,14 @@ SRCS = 	srcs/ft_isalpha.c \
 	srcs/ft_putnbr_fd.c
 
 OBJS = $(SRCS:.c=.o)
+
+SRCS_BONUS =	srcs/ft_lstnew_bonus.c \
+		srcs/ft_lstadd_front_bonus.c \
+		srcs/ft_lstsize_bonus.c \
+		srcs/ft_lstlast_bonus.c
+		
+OBJS_BONUS = $(SRCS_BONUS:.c=.o)
+
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 all: $(NAME)
@@ -60,4 +68,8 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 re: fclean all
+
+bonus: $(OBJS) $(OBJS_BONUS)
+	$(AR) -rcs $(NAME) $(OBJS) $(OBJS_BONUS)
+
 .PHONY: all $(NAME) clean fclean re

@@ -6,9 +6,11 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 15:24:33 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/02 15:32:30 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/04 21:25:39 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <libft.h>
 
 int	ft_lstsize(t_list *lst)
 {
