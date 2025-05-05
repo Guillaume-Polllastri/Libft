@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 23:14:21 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/04 19:29:22 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/05 11:09:31 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -268,6 +268,25 @@ void	test_ft_putnbr_fd(void)
 /* ************************************************************************** */
 
 /* ************************************************************************** */
+
+void	test_ft_lstadd_back()
+{
+/*	t_list	**lst;
+	t_list	*element1;
+	t_list	*element2;
+	t_list	*element3;
+	char	*str1;
+	char	*str2;
+	char	*str3;
+
+	str1 = ft_strdup("toto");
+	str2 = ft_strdup("tata");
+	str3 = ft_strdup("tutu");
+	element1 = ft_lstnew(str1);
+	element2 = ft_lstnew(str2);
+	element3 = ft_lstnew(str3);
+	ft_lstadd_back(lst, element1);*/
+}
 
 int	main()
 {
