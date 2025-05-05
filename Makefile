@@ -6,7 +6,7 @@
 #    By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/27 20:41:38 by gpollast          #+#    #+#              #
-#    Updated: 2025/05/05 14:52:39 by gpollast         ###   ########.fr        #
+#    Updated: 2025/05/05 16:13:27 by gpollast         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(AR) -rcs $(NAME) $(OBJS)
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(OBJS_BONUS)
 fclean: clean
 	rm -f $(NAME)
 re: fclean all
