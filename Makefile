@@ -6,7 +6,7 @@
 #    By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/27 20:41:38 by gpollast          #+#    #+#              #
-#    Updated: 2025/05/04 21:27:09 by gpollast         ###   ########.fr        #
+#    Updated: 2025/05/05 14:52:39 by gpollast         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,12 @@ OBJS = $(SRCS:.c=.o)
 SRCS_BONUS =	srcs/ft_lstnew_bonus.c \
 		srcs/ft_lstadd_front_bonus.c \
 		srcs/ft_lstsize_bonus.c \
-		srcs/ft_lstlast_bonus.c
+		srcs/ft_lstlast_bonus.c \
+		srcs/ft_lstadd_back_bonus.c \
+		srcs/ft_lstdelone_bonus.c \
+		srcs/ft_lstclear_bonus.c \
+		srcs/ft_lstiter_bonus.c \
+		srcs/ft_lstmap_bonus.c
 		
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
