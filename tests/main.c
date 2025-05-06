@@ -6,7 +6,7 @@
 /*   By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 23:14:21 by gpollast          #+#    #+#             */
-/*   Updated: 2025/05/05 11:09:31 by gpollast         ###   ########.fr       */
+/*   Updated: 2025/05/05 14:19:24 by gpollast         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	test_strncmp(void)
 void	test_strrchr(void)
 {
 	printf("Expected : o Result: %s\n", ft_strrchr("toto", 'o'));
-	printf("Expected : NULL Result: %s\n", ft_strrchr("bonjour", '\0'));
+	printf("Expected : tripouille Result: %s\n", ft_strrchr("tripouille", 't' + 256));
 }
 
 /* ************************************************************************** */
@@ -284,12 +284,14 @@ void	test_ft_lstadd_back()
 	str3 = ft_strdup("tutu");
 	element1 = ft_lstnew(str1);
 	element2 = ft_lstnew(str2);
-	element3 = ft_lstnew(str3);
+	element3 = ft_l int c)
+ 16 {
+stnew(str3);
 	ft_lstadd_back(lst, element1);*/
 }
 
 int	main()
 {
-	test_ft_itoa();
+	test_strrchr();
 	return (0);
 }
