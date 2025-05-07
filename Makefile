@@ -6,12 +6,12 @@
 #    By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/27 20:41:38 by gpollast          #+#    #+#              #
-#    Updated: 2025/05/07 10:49:21 by gpollast         ###   ########.fr        #
+#    Updated: 2025/05/07 12:59:54 by gpollast         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-CC = gcc
+CC = cc
 AR = ar
 CFLAGS = -Wall -Werror -Wextra -I.
 
