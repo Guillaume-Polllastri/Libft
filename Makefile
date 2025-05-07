@@ -6,7 +6,7 @@
 #    By: gpollast <gpollast@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/27 20:41:38 by gpollast          #+#    #+#              #
-#    Updated: 2025/05/06 11:16:13 by gpollast         ###   ########.fr        #
+#    Updated: 2025/05/07 10:49:21 by gpollast         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,11 +72,11 @@ OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	$(AR) -rcs $@ $^
-
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
+
+$(NAME): $(OBJS)
+	$(AR) -rcs $(NAME) $(OBJS)
 
 clean:
 	rm -f $(OBJS) $(OBJS_BONUS)
@@ -89,4 +89,4 @@ re: fclean all
 bonus: $(OBJS) $(OBJS_BONUS)
 	$(AR) -rcs $(NAME) $(OBJS) $(OBJS_BONUS)
 
-.PHONY: all $(NAME) clean fclean re bonus
+.PHONY: all clean fclean re bonus
